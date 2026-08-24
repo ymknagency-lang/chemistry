@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>الكيمياء العضوية 🧪 | شرح ومراجعة تفاعلية لطلاب الثانوية</title>
+
+  <meta
+    name="description"
+    content="أداة تفاعلية لمذاكرة الكيمياء العضوية، تشمل شرح المفاهيم والتفاعلات والمراجعة بطريقة سهلة ومناسبة لطلاب الثانوية."
+  >
+
+  <meta
+    name="keywords"
+    content="الكيمياء العضوية, كيمياء عضوية, شرح الكيمياء العضوية, مراجعة الكيمياء, كيمياء ثانوية عامة, تفاعلات عضوية, مذاكرة الكيمياء"
+  >
+
+  <meta name="author" content="Yassin Mohamed">
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="language" content="ar">
+
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_EG">
+  <meta
+    property="og:title"
+    content="الكيمياء العضوية 🧪 | أداة المذاكرة التفاعلية"
+  >
+  <meta
+    property="og:description"
+    content="ذاكر الكيمياء العضوية بطريقة تفاعلية وسهلة مع شرح ومراجعة للتفاعلات والمفاهيم الأساسية."
+  >
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+  <meta property="og:site_name" content="الكيمياء العضوية">
+  <meta property="og:image" content="https://YOUR-DOMAIN.com/og-image.jpg">
+  <meta property="og:image:alt" content="أداة مذاكرة الكيمياء العضوية">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta
+    name="twitter:title"
+    content="الكيمياء العضوية 🧪 | أداة المذاكرة التفاعلية"
+  >
+  <meta
+    name="twitter:description"
+    content="أداة تفاعلية لمذاكرة الكيمياء العضوية بطريقة سهلة وسريعة."
+  >
+  <meta name="twitter:image" content="https://YOUR-DOMAIN.com/og-image.jpg">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#0d1b1e">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">تخطَّ إلى المحتوى</a>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="brand">
+        <span class="brand-flask" aria-hidden="true">🧪</span>
+        <span class="brand-text">الكيمياء العضوية</span>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="التنقل الرئيسي">
+        <a href="#hero" data-nav>الرئيسية</a>
+        <a href="#study" data-nav>المذاكرة</a>
+        <a href="#reactions" data-nav>التفاعلات</a>
+        <a href="#compounds" data-nav>المركبات</a>
+        <a href="#formulas" data-nav>القوانين</a>
+        <a href="#flashcards" data-nav>Flashcards</a>
+        <a href="#quiz" data-nav>Quiz</a>
+        <button class="icon-btn" id="darkModeBtn" type="button" title="تبديل الوضع الليلي" aria-label="تبديل الوضع الليلي">🌙</button>
+        <button class="icon-btn" id="studyModeBtn" type="button" title="وضع المذاكرة" aria-label="تفعيل وضع المذاكرة">🎓</button>
+      </nav>
+    </div>
+    <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="navProgressFill"></div></div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <h1 class="hero-title">الكيمياء العضوية <span class="flask-spin">🧪</span></h1>
+        <p class="hero-subtitle">ذاكرها بطريقة أسهل وأمتع</p>
+        <p class="hero-line">اكتب اسم المركب أو رمزه… وخلي الموقع يعمل الباقي 😎</p>
+
+        <div class="hero-actions">
+          <a href="#study" class="btn btn-primary">ابدأ المذاكرة</a>
+          <a href="#reactions" class="btn btn-outline">استكشف التفاعلات</a>
+        </div>
+
+        <!-- COMPOUND SEARCH -->
+        <div class="search-card card" id="searchCard">
+          <h2 class="search-title">🧪 ابحث عن مركب</h2>
+          <form id="compoundSearchForm" class="search-form" autocomplete="off">
+            <label for="compoundInput" class="visually-hidden">اكتب اسم المركب أو الصيغة الكيميائية</label>
+            <input type="text" id="compoundInput" class="search-input" placeholder="اكتب اسم المركب أو الصيغة الكيميائية...">
+            <button type="submit" class="btn btn-accent">بحث</button>
+          </form>
+          <div class="search-hints">
+            <span>مثال:</span>
+            <button type="button" class="chip" data-example="الميثان">الميثان</button>
+            <button type="button" class="chip" data-example="Methane">Methane</button>
+            <button type="button" class="chip" data-example="CH4">CH4</button>
+            <button type="button" class="chip" data-example="Marsh Gas">Marsh Gas</button>
+          </div>
+          <div id="searchResult" class="search-result" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL SEARCH -->
+    <section class="site-search-wrap">
+      <div class="container">
+        <label for="siteSearchInput" class="visually-hidden">ابحث في الملخص</label>
+        <input type="search" id="siteSearchInput" class="site-search-input" placeholder="🔎 ابحث في الملخص... (أقسام، مركبات، تفاعلات، قوانين، بطاقات)">
+        <div id="siteSearchResults" class="site-search-results" hidden></div>
+      </div>
+    </section>
+
+    <!-- PROGRESS -->
+    <section class="progress-section">
+      <div class="progress-container">
+        <div class="progress-card card">
+          <div class="progress-header">
+            <span>تقدمك في المذاكرة</span>
+            <span id="progressPercentLabel">0%</span>
+          </div>
+          <div class="progress-bar-outer"><div class="progress-bar-inner" id="progressBarInner"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDY SECTIONS -->
+    <section id="study" class="section">
+      <div class="container">
+        <h2 class="section-title">📚 أقسام المذاكرة</h2>
+        <p class="section-desc">محتوى الملخص مقسم إلى 11 قسم — اقرأ كل قسم وأنهه لتزيد تقدمك.</p>
+        <div id="studySectionsList" class="study-list"></div>
+      </div>
+    </section>
+
+    <!-- REACTIONS -->
+    <section id="reactions" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">⚗️ محرك التفاعلات</h2>
+        <p class="section-desc">تصفح التفاعلات الموجودة في قاعدة بيانات الملخص، مقسمة حسب النوع.</p>
+
+        <div class="tabs" id="reactionTabs" role="tablist" aria-label="تصنيف التفاعلات"></div>
+        <div id="reactionsGrid" class="reactions-grid"></div>
+      </div>
+    </section>
+
+    <!-- REACTION MAP -->
+    <section id="reaction-map" class="section">
+      <div class="container">
+        <h2 class="section-title">🗺️ خريطة تفاعلات الميثان</h2>
+        <p class="section-desc">اضغط على أي مركب ناتج لعرض معلوماته وتفاعلاته.</p>
+        <div id="reactionMap" class="reaction-map card"></div>
+      </div>
+    </section>
+
+    <!-- COMPOUNDS -->
+    <section id="compounds" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">🧬 المركبات العضوية</h2>
+        <p class="section-desc">أهم المركبات الواردة في الملخص واستخداماتها.</p>
+        <div id="compoundsGrid" class="compounds-grid"></div>
+      </div>
+    </section>
+
+    <!-- FORMULAS -->
+    <section id="formulas" class="section">
+      <div class="container">
+        <h2 class="section-title">📐 قوانين الهيدروكربونات</h2>
+
+        <h3 class="sub-title">الصيغ العامة</h3>
+        <div id="formulasGrid" class="formulas-grid"></div>
+
+        <h3 class="sub-title">🔬 روابط سيجما (Sigma) في الألكانات</h3>
+        <div id="sigmaCard" class="card sigma-card"></div>
+
+        <h3 class="sub-title">🧪 قاعدة التقطير الجاف</h3>
+        <div id="distillationFlow" class="distillation-flow card"></div>
+
+        <h3 class="sub-title">⛓️ السلسلة المتجانسة</h3>
+        <div id="homologousCard" class="card homologous-card"></div>
+      </div>
+    </section>
+
+    <!-- FLASHCARDS -->
+    <section id="flashcards" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">🎴 Flashcards</h2>
+        <p class="section-desc">اضغط على البطاقة لقلبها.</p>
+        <div class="flashcards-controls">
+          <span id="flashcardCounter">1 / 1</span>
+          <div class="flashcards-nav">
+            <button type="button" id="prevFlashcard" class="btn btn-outline btn-sm">◀ السابقة</button>
+            <button type="button" id="shuffleFlashcards" class="btn btn-outline btn-sm">🔀 عشوائي</button>
+            <button type="button" id="nextFlashcard" class="btn btn-outline btn-sm">التالية ▶</button>
+          </div>
+        </div>
+        <div class="flashcard-wrap">
+          <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="اقلب البطاقة">
+            <div class="flashcard-inner" id="flashcardInner">
+              <div class="flashcard-face flashcard-front" id="flashcardFront"></div>
+              <div class="flashcard-face flashcard-back" id="flashcardBack"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flashcard-flip-btn-wrap">
+          <button type="button" id="flipFlashcardBtn" class="btn btn-primary">اقلب البطاقة</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="section">
+      <div class="container">
+        <h2 class="section-title">📝 اختبر نفسك</h2>
+        <div id="quizIntro" class="card quiz-intro">
+          <p>اختبار تفاعلي مبني على محتوى الملخص. جاهز؟</p>
+          <button type="button" id="startQuizBtn" class="btn btn-primary">ابدأ الاختبار</button>
+        </div>
+        <div id="quizArea" class="quiz-area" hidden></div>
+        <div id="quizResult" class="card quiz-result" hidden></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>مصدر المحتوى: دليل الكيمياء العضوية والملخص التحصيلي — الباب الخامس (الدروس 1-3)</p>
+    <p class="footer__copyright">&copy; 2026 Yassin Mohamed. All rights reserved.</p>
+    <p class="footer__made">Designed &amp; Built with precision by YMKN.</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
