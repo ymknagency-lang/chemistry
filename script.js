@@ -13,12 +13,6 @@
    القسم المعلّم "Additional Chemistry Data" يحتوي على بيانات إضافية لازمة
    لعمل أداة البحث فقط، وهو منفصل تمامًا عن محتوى الـ PDF الأصلي.
    ========================================================================== */
-/* ==========================================================================
-   CHEMISTRY DATA
-   المصدر: دليل الكيمياء العضوية والملخص التحصيلي - الباب الخامس (الدروس 1-3)
-   القسم المعلّم "Additional Chemistry Data" يحتوي على بيانات إضافية لازمة
-   لعمل أداة البحث فقط، وهو منفصل تمامًا عن محتوى الـ PDF الأصلي.
-   ========================================================================== */
 
 const chemistryData = {
 
@@ -669,7 +663,207 @@ const chemistryData = {
       explain: "CH4 --1000C, no air--> C(s) + 2H2(g) لإنتاج أسود الكربون."
     }
   ]
+
+  ,
+  /* ---------------------- الدرس الرابع من الـ PDF: الألكينات والإيثين ---------------------- */
+  pdfLesson4: {
+    compounds: [
+      {
+        id: "ethene",
+        names: { arabic: "الإيثين", iupac: "Ethene", common: "Ethylene" },
+        aliases: ["ethene", "ethylene", "الإيثين", "الايثين", "الإيثيلين", "c2h4"],
+        formula: "C2H4",
+        type: "alkene",
+        typeLabel: "ألكين",
+        use: "أبسط مركبات سلسلة الألكينات، ويمثل المركب الشائع والأساسي في هذه السلسلة.",
+        related: ["but-1-ene", "but-2-ene", "2-methylpropene"]
+      },
+      {
+        id: "but-1-ene",
+        names: { arabic: "1-بيوتين", iupac: "But-1-ene", common: "" },
+        aliases: ["1-butene", "but-1-ene", "1-بيوتين", "بيوتين-1", "c4h8"],
+        formula: "C4H8",
+        type: "alkene",
+        typeLabel: "ألكين",
+        use: "أحد المتشكلات البنائية للصيغة الجزيئية C4H8 المذكورة في الدرس.",
+        related: ["but-2-ene", "2-methylpropene"]
+      },
+      {
+        id: "but-2-ene",
+        names: { arabic: "2-بيوتين", iupac: "But-2-ene", common: "" },
+        aliases: ["2-butene", "but-2-ene", "2-بيوتين", "بيوتين-2", "c4h8"],
+        formula: "C4H8",
+        type: "alkene",
+        typeLabel: "ألكين",
+        use: "أحد المتشكلات البنائية للصيغة الجزيئية C4H8 المذكورة في الدرس.",
+        related: ["but-1-ene", "2-methylpropene"]
+      },
+      {
+        id: "2-methylpropene",
+        names: { arabic: "2-ميثيل بروبين", iupac: "2-Methylpropene", common: "" },
+        aliases: ["2-methylpropene", "2-methyl propene", "2-ميثيل بروبين", "c4h8"],
+        formula: "C4H8",
+        type: "alkene",
+        typeLabel: "ألكين متفرع",
+        use: "أحد المتشكلات البنائية للصيغة الجزيئية C4H8 الظاهرة في أمثلة الدرس.",
+        related: ["but-1-ene", "but-2-ene"]
+      },
+      {
+        id: "2-methyl-1-butene",
+        names: { arabic: "2-ميثيل-1-بيوتين", iupac: "2-Methylbut-1-ene", common: "" },
+        aliases: ["2-methyl-1-butene", "2-methylbut-1-ene", "2-ميثيل-1-بيوتين", "c5h10"],
+        formula: "C5H10",
+        type: "alkene",
+        typeLabel: "ألكين متفرع",
+        use: "مثال وارد في الدرس لصيغة بنائية لأحد أيزومرات C5H10.",
+        related: []
+      },
+      {
+        id: "4-propyl-2-heptene",
+        names: { arabic: "4-بروبيل-2-هبتين", iupac: "4-Propylhept-2-ene", common: "" },
+        aliases: ["4-propyl-2-heptene", "4-propylhept-2-ene", "4-بروبيل-2-هبتين", "c10h20"],
+        formula: "C10H20",
+        type: "alkene",
+        typeLabel: "ألكين",
+        use: "مثال تطبيقي في الدرس لإيجاد الصيغة الجزيئية من الصيغة البنائية باستخدام القانون العام للألكينات.",
+        related: []
+      }
+    ],
+    reactions: [
+      {
+        id: "r16", compoundIds: ["ethene"],
+        nameArabic: "تحضير غاز الإيثين في المعمل — الخطوة الأولى",
+        nameStandard: "Preparation of Ethene — Step 1",
+        equation: "C2H5OH(l) + H2SO4(aq) --conc, 80C--> C2H5HSO4(aq) + H2O(v)",
+        conditions: "حمض كبريتيك مركز عند 80°م",
+        products: "كبريتات إيثيل هيدروجينية + ماء",
+        type: "lab",
+        desc: "يتفاعل الإيثانول مع حمض الكبريتيك المركز الساخن عند 80°م لتكوين كبريتات إيثيل هيدروجينية وماء."
+      },
+      {
+        id: "r17", compoundIds: ["ethene"],
+        nameArabic: "تحضير غاز الإيثين في المعمل — الخطوة الثانية",
+        nameStandard: "Preparation of Ethene — Step 2",
+        equation: "C2H5HSO4(aq) --180C--> C2H4(g) + H2SO4(aq)",
+        conditions: "تسخين عند 180°م",
+        products: "الإيثين + حمض الكبريتيك",
+        type: "conversion",
+        desc: "تتحلل كبريتات إيثيل هيدروجينية بالحرارة عند 180°م لتكوين الإيثين وحمض الكبريتيك."
+      },
+      {
+        id: "r18", compoundIds: ["ethene"],
+        nameArabic: "المعادلة الكلية لتحضير الإيثين",
+        nameStandard: "Overall Preparation of Ethene",
+        equation: "C2H5OH(l) --conc H2SO4, 180C--> C2H4(g) + H2O(v)",
+        conditions: "حمض كبريتيك مركز، 180°م",
+        products: "C2H4 + H2O",
+        type: "lab",
+        desc: "بجمع معادلتي الخطوتين نحصل على معادلة تحضير غاز الإيثين من الإيثانول في المعمل."
+      }
+    ],
+    sections: [
+      {
+        id: "s12", title: "12. الرابطة سيجما والرابطة باي في الألكينات",
+        paragraphs: [
+          "الرابطة باي (π) تنشأ من تداخل الأوربيتالات الذرية جنبًا إلى جنب، ولذلك يسهل كسرها، بينما الرابطة سيجما (σ) تنشأ من تداخل الأوربيتالات الذرية بالرأس.",
+          "في جزيء الإيثين ترتبط ذرتا الكربون بعضهما ببعض، وترتبط كل منهما بذرتي هيدروجين عن طريق نوعين من الروابط: سيجما وباي."
+        ],
+        note: "الرابطة المزدوجة في الألكين تتكون من رابطة سيجما ورابطة باي.",
+        equations: ["C=C = σ + π"],
+        summary: ["σ تنتج من التداخل بالرأس.", "π تنتج من التداخل بالجنب.", "الرابطة المزدوجة = σ + π."]
+      },
+      {
+        id: "s13", title: "13. الألكينات (الأوليفينات)",
+        paragraphs: [
+          "الألكينات هيدروكربونات أليفاتية غير مشبعة مفتوحة السلسلة؛ يوجد بين ذرات الكربون في جزيئاتها رابطة مزدوجة واحدة على الأقل.",
+          "تسمى سلسلة الألكينات بالأوليفينات، ويُشتق الاسم من كلمة لاتينية تعني الزيت بسبب احتواء الزيوت النباتية على روابط مزدوجة في سلاسلها الكربونية.",
+          "تشتق الألكينات من الألكانات المقابلة لها بانتزاع ذرتي هيدروجين منها، ولذلك تقل الصيغة عن الألكان المقابل بذرتي هيدروجين، وتستبدل الخاتمة -ان بالخاتمة -ين."
+        ],
+        note: "القانون العام لسلسلة الألكينات: CnH2n، مع n > 1.",
+        equations: ["CnH2n  (n > 1)", "C2H6 --2H--> C2H4"],
+        summary: ["الألكينات هيدروكربونات غير مشبعة مفتوحة السلسلة.", "تحتوي على رابطة مزدوجة واحدة على الأقل.", "الصيغة العامة CnH2n."]
+      },
+      {
+        id: "s14", title: "14. تسمية الألكينات حسب الأيوباك",
+        paragraphs: [
+          "الخطوة الأولى: تحديد أطول سلسلة كربونية تحتوي على رابطة مزدوجة.",
+          "الخطوة الثانية: تسمية السلسلة الأساسية حسب عدد ذرات الكربون وإضافة الخاتمة -ين.",
+          "الخطوة الثالثة: ترقيم السلسلة الأساسية من الطرف الأقرب للرابطة المزدوجة.",
+          "الخطوة الرابعة: تحديد موضع واسم التفرع.",
+          "الخطوة الخامسة: عند وجود أكثر من تفرع ترتب أسماء التفرعات أبجديًا حسب أسمائها الإنجليزية، دون التقيد بالترتيب الرقمي لها."
+        ],
+        note: "أولوية الترقيم تكون للرابطة المزدوجة أولًا، ثم تُراعى التفرعات.",
+        equations: ["3-Methylpent-1-ene", "3-Ethylhex-1-ene", "2-Methylbut-2-ene", "4-Ethyl-3-methylhept-3-ene"],
+        summary: ["اختر أطول سلسلة بها C=C.", "رقّم من الطرف الأقرب للرابطة المزدوجة.", "اكتب موضع الرابطة ثم التفرعات وفق قواعد الأيوباك."]
+      },
+      {
+        id: "s15", title: "15. الصيغ الجزيئية والأيزومرات في الألكينات",
+        paragraphs: [
+          "أول صيغة جزيئية في سلسلة الألكينات تكون لها عدة أيزومرات هي C4H8، وتوضح أمثلة الدرس وجود أكثر من صيغة بنائية للمركب ذي الصيغة الجزيئية نفسها.",
+          "إذا كانت الكتلة المولية لهيدروكربون أليفاتي غير مشبع 56 g/mol ويحتوي المول منه على 48 g كربون، تكون كتلـة الهيدروجين 8 g، ومن ثم الصيغة الجزيئية C4H8.",
+          "إذا كانت الكتلة المولية لألكين 70 g/mol، فباستخدام CnH2n نحصل على n = 5، وبالتالي الصيغة C5H10."
+        ],
+        note: "يمكن أن توجد متشكلات (أيزومرات) مختلفة لها نفس الصيغة الجزيئية وتختلف في ترتيب الذرات.",
+        equations: ["C4H8", "C5H10", "12n + 2n = 56  →  n = 4", "12n + 2n = 70  →  n = 5"],
+        summary: ["C4H8 أول صيغة في السلسلة لها عدة أيزومرات.", "الألكينات تتبع CnH2n.", "اختلاف ترتيب الذرات مع ثبات الصيغة الجزيئية يعطي أيزومرات."]
+      },
+      {
+        id: "s16", title: "16. الإيثين وتحضيره في المعمل",
+        paragraphs: [
+          "الإيثين C2H4 يمثل أول مركبات سلسلة الألكينات، والاسم الشائع له هو الإيثيلين.",
+          "يحضر غاز الإيثين في المعمل بنزع الماء من الكحول الإيثيلي (الإيثانول) بواسطة حمض الكبريتيك المركز الساخن إلى 180°م باستخدام جهاز كالمبين في الدرس.",
+          "يتم التفاعل على خطوتين: يتفاعل الإيثانول أولًا مع حمض الكبريتيك المركز الساخن عند 80°م لتكوين كبريتات إيثيل هيدروجينية، ثم تتحلل بالحرارة عند 180°م لتكوين الإيثين وحمض الكبريتيك.",
+          "يرر غاز الإيثين أولًا على محلول هيدروكسيد الصوديوم للتخلص من آثار أبخرة حمض الكبريتيك المصاحبة، ثم يجمع فوق سطح الماء لأن كثافته أقل من كثافة الماء ولا يذوب فيه."
+        ],
+        note: "المعادلة الكلية: C2H5OH --conc H2SO4, 180°C--> C2H4 + H2O.",
+        equations: [
+          "C2H5OH(l) + H2SO4(aq) --conc, 80C--> C2H5HSO4(aq) + H2O(v)",
+          "C2H5HSO4(aq) --180C--> C2H4(g) + H2SO4(aq)",
+          "C2H5OH(l) --conc H2SO4, 180C--> C2H4(g) + H2O(v)"
+        ],
+        summary: ["الإيثين C2H4 أول الألكينات.", "يحضر من الإيثانول بنزع الماء بحمض الكبريتيك المركز عند 180°م.", "يغسل الغاز بمحلول NaOH ويجمع فوق الماء."]
+      }
+    ],
+    flashcards: [
+      { front: "مم تتكون الرابطة المزدوجة في الألكينات؟", back: "من رابطة سيجما σ ورابطة باي π." },
+      { front: "كيف تنشأ الرابطة باي π؟", back: "من التداخل بالجنب بين الأوربيتالات الذرية." },
+      { front: "ما الصيغة العامة للألكينات؟", back: "CnH2n، حيث n > 1." },
+      { front: "لماذا تسمى الألكينات بالأوليفينات؟", back: "لأن اسم أوليفين مشتق من كلمة لاتينية تعني الزيت، نظرًا لوجود روابط مزدوجة في سلاسل بعض الزيوت النباتية." },
+      { front: "كيف تُشتق الألكينات من الألكانات المقابلة؟", back: "بانتزاع ذرتي هيدروجين من الألكان المقابل." },
+      { front: "ما أول صيغة جزيئية في سلسلة الألكينات لها عدة أيزومرات؟", back: "C4H8." },
+      { front: "ما أول خطوة في تسمية الألكينات؟", back: "تحديد أطول سلسلة كربونية تحتوي على رابطة مزدوجة." },
+      { front: "من أي طرف نرقم سلسلة الألكين؟", back: "من الطرف الأقرب للرابطة المزدوجة." },
+      { front: "ما الصيغة الجزيئية لـ 4-بروبيل-2-هبتين؟", back: "C10H20." },
+      { front: "ما اسم C2H4 الشائع؟", back: "الإيثيلين." },
+      { front: "كيف يحضر الإيثين في المعمل؟", back: "بنزع الماء من الإيثانول باستخدام حمض الكبريتيك المركز الساخن عند 180°م." },
+      { front: "ما وسيط الخطوة الأولى في تحضير الإيثين؟", back: "كبريتات إيثيل هيدروجينية C2H5HSO4." },
+      { front: "لماذا يمرر الإيثين على محلول NaOH؟", back: "للتخلص من آثار أبخرة حمض الكبريتيك المصاحبة للغاز." },
+      { front: "لماذا يجمع الإيثين فوق الماء؟", back: "لأن كثافته أقل من كثافة الماء ولا يذوب فيه." }
+    ],
+    quiz: [
+      { q: "ما الصيغة العامة للألكينات؟", type: "mc", options: ["CnH2n+2", "CnH2n", "CnH2n-2", "CnH2n+1"], correct: 1, explain: "الصيغة العامة للألكينات هي CnH2n." },
+      { q: "الرابطة المزدوجة في الألكينات تتكون من رابطتي سيجما.", type: "tf", correct: false, explain: "خطأ، تتكون من رابطة سيجما ورابطة باي." },
+      { q: "ما أول خطوة في تسمية الألكينات؟", type: "mc", options: ["ترقيم التفرعات", "تحديد أطول سلسلة تحتوي على C=C", "ترتيب التفرعات أبجديًا", "حذف الهيدروجين"], correct: 1, explain: "يجب أولًا تحديد أطول سلسلة كربونية تحتوي على الرابطة المزدوجة." },
+      { q: "ما الصيغة الجزيئية لألكين كتلته المولية 70 g/mol؟", type: "mc", options: ["C4H8", "C5H10", "C6H12", "C7H14"], correct: 1, explain: "من 12n + 2n = 70 نحصل على n = 5، إذن C5H10." },
+      { q: "كم رابطة مزدوجة توجد على الأقل في جزيء الألكين؟", type: "mc", options: ["لا توجد", "واحدة", "ثلاث", "أربع"], correct: 1, explain: "الألكينات تحتوي على رابطة مزدوجة واحدة على الأقل." },
+      { q: "ما اسم C2H4؟", type: "mc", options: ["الإيثان", "الإيثين", "الإيثاين", "الميثان"], correct: 1, explain: "C2H4 هو الإيثين، وأول مركبات سلسلة الألكينات." },
+      { q: "عند تسمية الألكين نبدأ الترقيم من الطرف الأقرب للرابطة المزدوجة.", type: "tf", correct: true, explain: "صحيح، أولوية الترقيم للرابطة المزدوجة." },
+      { q: "ما الناتج النهائي لتحضير الإيثين من الإيثانول؟", type: "equation", options: ["C2H6 + H2O", "C2H4 + H2O", "CH4 + CO2", "C2H5HSO4 + H2O"], correct: 1, explain: "المعادلة الكلية تعطي C2H4 + H2O عند تسخين الإيثانول بحمض الكبريتيك المركز." },
+      { q: "ما الوسيط المتكون في الخطوة الأولى لتحضير الإيثين؟", type: "mc", options: ["كبريتات إيثيل هيدروجينية", "كلوروميثان", "سيانات الأمونيوم", "أسيتات الصوديوم"], correct: 0, explain: "يتكون C2H5HSO4 في الخطوة الأولى." },
+      { q: "لماذا يُغسل غاز الإيثين بمحلول هيدروكسيد الصوديوم؟", type: "mc", options: ["لزيادة كثافته", "لإزالة آثار H2SO4", "لإنتاج الميثان", "لإضافة هيدروجين"], correct: 1, explain: "للتخلص من آثار أبخرة حمض الكبريتيك المصاحبة للغاز." }
+    ]
+  }
+
 };
+
+
+
+/* دمج بيانات الدرس الرابع من الـ PDF داخل قاعدة البيانات الرئيسية */
+chemistryData.compounds.push(...chemistryData.pdfLesson4.compounds);
+chemistryData.reactions.push(...chemistryData.pdfLesson4.reactions);
+chemistryData.sections.push(...chemistryData.pdfLesson4.sections);
+chemistryData.flashcards.push(...chemistryData.pdfLesson4.flashcards);
+chemistryData.quiz.push(...chemistryData.pdfLesson4.quiz);
 
 /* ==========================================================================
    APP UTILITIES
@@ -697,13 +891,11 @@ function findCompound(query) {
   ].some(v => norm(v) === q));
   if (byNameOrFormula) return byNameOrFormula;
 
-  // Safe alkane formula recognition: only formulas actually represented in the local database.
+  // Safe formula recognition: never invent a compound; return only a formula
+  // that already exists in the local database.
   const match = q.match(/^c(\d+)h(\d+)$/i);
   if (match) {
-    const expectedHydrogens = 2 * Number(match[1]) + 2;
-    if (Number(match[2]) === expectedHydrogens) {
-      return allCompounds.find(c => norm(c.formula) === q) || null;
-    }
+    return allCompounds.find(c => norm(c.formula) === q) || null;
   }
   return null;
 }
@@ -1115,74 +1307,247 @@ function initFlashcards() {
 }
 
 /* ==========================================================================
-   QUIZ
+   QUIZ - RANDOM QUESTIONS
    ========================================================================== */
 function initQuiz() {
   const startBtn = $('#startQuizBtn');
   const intro = $('#quizIntro');
   const area = $('#quizArea');
   const result = $('#quizResult');
+
   if (!startBtn || !intro || !area || !result) return;
 
   let index = 0;
   let score = 0;
 
+  // نسخة خاصة بالامتحان الحالي
+  let examQuestions = [];
+
+  // خلط Array عشوائيًا - Fisher-Yates
+  function shuffle(array) {
+    const arr = [...array];
+
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+
+    return arr;
+  }
+
+  // تجهيز امتحان جديد
+  function createRandomExam() {
+    // خلط الأسئلة
+    examQuestions = shuffle(chemistryData.quiz).map(q => {
+
+      // أسئلة صح وخطأ
+      if (q.type === 'tf') {
+        return {
+          ...q,
+          options: ['صح', 'خطأ']
+        };
+      }
+
+      // أسئلة الاختيارات
+      const correctAnswer = q.options[q.correct];
+
+      // خلط الاختيارات
+      const shuffledOptions = shuffle(q.options);
+
+      // معرفة مكان الإجابة الصحيحة بعد الخلط
+      const newCorrectIndex = shuffledOptions.indexOf(correctAnswer);
+
+      return {
+        ...q,
+        options: shuffledOptions,
+        correct: newCorrectIndex
+      };
+    });
+  }
+
   function renderQuestion() {
-    const q = chemistryData.quiz[index];
-    const options = q.type === 'tf' ? ['صح', 'خطأ'] : q.options;
-    area.innerHTML = `<div class="card quiz-question-card">
-      <div class="quiz-progress">السؤال ${index + 1} من ${chemistryData.quiz.length}</div>
-      <div class="quiz-question-text">${esc(q.q)}</div>
-      <div class="quiz-options">${options.map((o, i) => `<button type="button" class="quiz-option" data-answer="${i}">${esc(o)}</button>`).join('')}</div>
-      <div id="quizFeedback"></div>
-    </div>`;
-    $$('.quiz-option', area).forEach(btn => btn.addEventListener('click', () => answerQuestion(Number(btn.dataset.answer), q)));
+    const q = examQuestions[index];
+
+    if (!q) return;
+
+    const options = q.type === 'tf'
+      ? ['صح', 'خطأ']
+      : q.options;
+
+    area.innerHTML = `
+      <div class="card quiz-question-card">
+
+        <div class="quiz-progress">
+          السؤال ${index + 1} من ${examQuestions.length}
+        </div>
+
+        <div class="quiz-question-text">
+          ${esc(q.q)}
+        </div>
+
+        <div class="quiz-options">
+          ${options.map((option, i) => `
+            <button
+              type="button"
+              class="quiz-option"
+              data-answer="${i}">
+              ${esc(option)}
+            </button>
+          `).join('')}
+        </div>
+
+        <div id="quizFeedback"></div>
+
+      </div>
+    `;
+
+    $$('.quiz-option', area).forEach(btn => {
+      btn.addEventListener('click', () => {
+        answerQuestion(
+          Number(btn.dataset.answer),
+          q
+        );
+      });
+    });
   }
 
   function answerQuestion(answer, q) {
-    const correct = q.type === 'tf' ? (answer === 0) === q.correct : answer === q.correct;
+
+    let correct;
+
+    if (q.type === 'tf') {
+      const correctIndex = q.correct ? 0 : 1;
+      correct = answer === correctIndex;
+    } else {
+      correct = answer === q.correct;
+    }
+
     const buttons = $$('.quiz-option', area);
-    buttons.forEach(btn => { btn.disabled = true; });
 
-    const correctIndex = q.type === 'tf' ? (q.correct ? 0 : 1) : q.correct;
+    // منع تغيير الإجابة بعد الاختيار
+    buttons.forEach(btn => {
+      btn.disabled = true;
+    });
+
+    // تحديد الإجابة الصحيحة
+    const correctIndex = q.type === 'tf'
+      ? (q.correct ? 0 : 1)
+      : q.correct;
+
     buttons[correctIndex]?.classList.add('correct');
-    if (!correct) buttons[answer]?.classList.add('incorrect');
-    else score += 1;
 
-    const isLast = index + 1 === chemistryData.quiz.length;
+    // تحديد إجابة الطالب لو كانت غلط
+    if (!correct) {
+      buttons[answer]?.classList.add('incorrect');
+    } else {
+      score++;
+    }
+
+    const isLast = index + 1 === examQuestions.length;
+
     $('#quizFeedback').innerHTML = `
-      <div class="quiz-feedback ${correct ? 'correct-text' : 'incorrect-text'}">${correct ? 'برافو! 🧪🔥' : 'قريبة! راجع النقطة دي 👀'}</div>
-      <div class="quiz-explain">${esc(q.explain)}</div>
-      <button type="button" class="btn btn-primary quiz-next-btn" id="quizNext">${isLast ? 'النتيجة' : 'السؤال التالي'}</button>`;
+      <div class="quiz-feedback ${
+        correct ? 'correct-text' : 'incorrect-text'
+      }">
+        ${
+          correct
+            ? 'برافو! 🧪🔥'
+            : 'قريبة! راجع النقطة دي 👀'
+        }
+      </div>
+
+      <div class="quiz-explain">
+        ${esc(q.explain)}
+      </div>
+
+      <button
+        type="button"
+        class="btn btn-primary quiz-next-btn"
+        id="quizNext">
+        ${isLast ? 'النتيجة' : 'السؤال التالي'}
+      </button>
+    `;
 
     $('#quizNext').addEventListener('click', () => {
-      index += 1;
-      if (index < chemistryData.quiz.length) renderQuestion();
-      else showResult();
+
+      index++;
+
+      if (index < examQuestions.length) {
+        renderQuestion();
+      } else {
+        showResult();
+      }
+
     });
   }
 
   function showResult() {
-    const pct = Math.round((score / chemistryData.quiz.length) * 100);
+
+    const pct = Math.round(
+      (score / examQuestions.length) * 100
+    );
+
     area.hidden = true;
     result.hidden = false;
-    const message = pct >= 80 ? 'الكربون فخور بيك 😂🧪' : pct >= 50 ? 'ممتاز، كمل مراجعة النقاط اللي غلطت فيها 💪' : 'ولا يهمك… نعيدها واحدة واحدة 👀';
-    result.innerHTML = `<div class="score-num">${score} / ${chemistryData.quiz.length}</div>
-      <p>${message}</p>
-      <button type="button" class="btn btn-outline" id="retryQuiz">إعادة الاختبار</button>`;
-    $('#retryQuiz').addEventListener('click', () => startBtn.click());
+
+    let message;
+
+    if (pct >= 80) {
+      message = 'الكربون فخور بيك 😂🧪';
+    } else if (pct >= 50) {
+      message = 'ممتاز، كمل مراجعة النقاط اللي غلطت فيها 💪';
+    } else {
+      message = 'ولا يهمك… نعيدها واحدة واحدة 👀';
+    }
+
+    result.innerHTML = `
+      <div class="score-num">
+        ${score} / ${examQuestions.length}
+      </div>
+
+      <p>
+        ${message}
+      </p>
+
+      <p>
+        النسبة: ${pct}%
+      </p>
+
+      <button
+        type="button"
+        class="btn btn-outline"
+        id="retryQuiz">
+        إعادة الاختبار 🔄
+      </button>
+    `;
+
+    $('#retryQuiz').addEventListener('click', () => {
+      startNewQuiz();
+    });
   }
 
-  startBtn.addEventListener('click', () => {
+  function startNewQuiz() {
+
+    // إعادة كل شيء من البداية
     index = 0;
     score = 0;
+
+    // إنشاء امتحان بترتيب جديد
+    createRandomExam();
+
     intro.hidden = true;
     result.hidden = true;
     area.hidden = false;
+
     renderQuestion();
+  }
+
+  // بدء الامتحان
+  startBtn.addEventListener('click', () => {
+    startNewQuiz();
   });
 }
-
 /* ==========================================================================
    SITE-WIDE SEARCH
    ========================================================================== */
